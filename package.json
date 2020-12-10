@@ -1,0 +1,24 @@
+{
+  "name": "keep-ropsten-ecdsa-operators",
+  "version": "0.1.0",
+  "scripts": {
+    "build-contract": "solc contracts/Gravity.sol --abi -o abis --overwrite && solc contracts/Gravity.sol --bin -o bin --overwrite",
+    "create": "graph create $GITHUB_USER/keep-ropsten-ecdsa-operators --node https://api.thegraph.com/deploy/",
+    "create-local": "graph create $GITHUB_USER/keep-ropsten-ecdsa-operators --node http://127.0.0.1:8020",
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy $GITHUB_USER/keep-ropsten-ecdsa-operators --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --access-token 420c7158550743879c0961c2a49bac68",
+    "deploy-local": "graph deploy $GITHUB_USER/keep-ropsten-ecdsa-operators --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.18.0",
+    "@graphprotocol/graph-ts": "^0.18.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "truffle": "^5.0.4",
+    "truffle-contract": "^4.0.5",
+    "truffle-hdwallet-provider": "^1.0.4"
+  }
+}

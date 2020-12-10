@@ -1,0 +1,5 @@
+type Operator @entity {
+  id: ID!
+  address: Bytes!
+  amount: BigInt!
+}
